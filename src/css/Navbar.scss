@@ -1,0 +1,137 @@
+@import "./variables";
+
+
+.navbar {
+    .icon-menu-div {
+      position: fixed;
+      top: 20px;
+      right: 50px;
+      z-index: 5;
+        // margin-left: auto;
+    
+        .bar-container {
+            display: inline-block;
+            cursor: pointer;
+          
+            .bar1,
+            .bar2,
+            .bar3 {
+              width: 45px;
+              height: 3px;
+              background-color: white;
+              margin: 12px 0px;
+              transition: opacity 0.4s, transform 0.4s, background-color 0.2s;
+              border-radius: 10px;
+            }
+
+            &:hover {
+              .bar1, .bar2, .bar3 {
+                background-color: $DarkGreen;
+              }
+            }
+          }
+    }
+
+    .first-animation {
+      background-color: $DarkGreen;
+      transition: transform 0.7s;
+    }
+
+    .second-animation {
+      background-color: $DeepPurple;
+      transition: transform 0.5s;
+    }
+
+    .third-animation {
+      background-color: $Orange;
+      transition: transform 0.5s;
+    }
+
+    .menu-div {
+      background-color: $BackgroundColor;
+      transition: transform 0.45s;
+    }
+
+    .first-animation, .second-animation, .third-animation, .menu-div {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+
+      position: absolute;
+      transform: translate(100%, 0%);
+    }
+
+    .change-transform {
+      transform: translate(0%, 0%);
+    }
+
+    .menu-div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .links-wrapper {
+        width: 80%;
+  
+        h1 {
+          position: relative;
+          text-align: left;
+          width: 100%;
+          font-family: 'Helvetica', 'Arial', sans-serif;
+          font-weight: 100;
+          font-size: 5em;
+          opacity: 0%;
+          transition: opacity 0.4s;
+          line-height: 1em;
+          margin-top: 15px;
+          color: white;
+          cursor: pointer;
+          transform-style: preserve-3d;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top:0;
+            left:0;
+            width: 0%;
+            height: 100%;
+            transition: .5s;
+            transform: translateZ(-1px);
+            background-color: $DarkGreen;
+          }
+          
+          &:hover::before {
+            width: 100%;
+          }
+        }
+
+        .change-opacity {
+          opacity: 100%;
+          animation-name: zoomInText;
+          animation-duration: 0.4s;
+        }
+
+        @keyframes zoomInText {
+          0% {transform: scale(1, 1)}
+          50% {
+            transform: scale(1.03, 1.03);
+          }
+          100% {
+            transform: scale(1, 1);
+          }
+        }
+      }
+    }
+}
+
+.change {
+    & .bar1 {
+      transform: rotate(-45deg) translate(-7px, 12.5px);
+    }
+    & .bar2 {
+      opacity: 0;
+    }
+    & .bar3 {
+      transform: rotate(45deg) translate(-9px, -13.5px);
+    }
+  }

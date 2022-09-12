@@ -1,0 +1,181 @@
+.navbar .icon-menu-div {
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  z-index: 5;
+}
+
+.navbar .icon-menu-div .bar-container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.navbar .icon-menu-div .bar-container .bar1,
+.navbar .icon-menu-div .bar-container .bar2,
+.navbar .icon-menu-div .bar-container .bar3 {
+  width: 45px;
+  height: 3px;
+  background-color: white;
+  margin: 12px 0px;
+  -webkit-transition: opacity 0.4s, background-color 0.2s, -webkit-transform 0.4s;
+  transition: opacity 0.4s, background-color 0.2s, -webkit-transform 0.4s;
+  transition: opacity 0.4s, transform 0.4s, background-color 0.2s;
+  transition: opacity 0.4s, transform 0.4s, background-color 0.2s, -webkit-transform 0.4s;
+  border-radius: 10px;
+}
+
+.navbar .icon-menu-div .bar-container:hover .bar1, .navbar .icon-menu-div .bar-container:hover .bar2, .navbar .icon-menu-div .bar-container:hover .bar3 {
+  background-color: #007A56;
+}
+
+.navbar .first-animation {
+  background-color: #007A56;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+.navbar .second-animation {
+  background-color: #583759;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.navbar .third-animation {
+  background-color: #ED7D3A;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.navbar .menu-div {
+  background-color: #1D1E2C;
+  -webkit-transition: -webkit-transform 0.45s;
+  transition: -webkit-transform 0.45s;
+  transition: transform 0.45s;
+  transition: transform 0.45s, -webkit-transform 0.45s;
+}
+
+.navbar .first-animation, .navbar .second-animation, .navbar .third-animation, .navbar .menu-div {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  -webkit-transform: translate(100%, 0%);
+          transform: translate(100%, 0%);
+}
+
+.navbar .change-transform {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+.navbar .menu-div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .menu-div .links-wrapper {
+  width: 80%;
+}
+
+.navbar .menu-div .links-wrapper h1 {
+  position: relative;
+  text-align: left;
+  width: 100%;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 100;
+  font-size: 5em;
+  opacity: 0%;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  line-height: 1em;
+  margin-top: 15px;
+  color: white;
+  cursor: pointer;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.navbar .menu-div .links-wrapper h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateZ(-1px);
+          transform: translateZ(-1px);
+  background-color: #007A56;
+}
+
+.navbar .menu-div .links-wrapper h1:hover::before {
+  width: 100%;
+}
+
+.navbar .menu-div .links-wrapper .change-opacity {
+  opacity: 100%;
+  -webkit-animation-name: zoomInText;
+          animation-name: zoomInText;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+}
+
+@-webkit-keyframes zoomInText {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.03, 1.03);
+            transform: scale(1.03, 1.03);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes zoomInText {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  50% {
+    -webkit-transform: scale(1.03, 1.03);
+            transform: scale(1.03, 1.03);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-7px, 12.5px);
+          transform: rotate(-45deg) translate(-7px, 12.5px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-9px, -13.5px);
+          transform: rotate(45deg) translate(-9px, -13.5px);
+}
+/*# sourceMappingURL=Navbar.css.map */
