@@ -1,0 +1,111 @@
+@import "./variables";
+
+
+.main-page-container {
+    width: 90%;
+    min-height: 100vh;
+    // padding-left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    .front-page-container {
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        position: relative;
+
+        .front-page-text {
+            width:60%;
+            font-size: 2.5em;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            // font-weight: 400;
+            color: white;
+            z-index: 5;
+        }
+
+        .first-shape, .second-shape, .third-shape {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .first-shape {
+            top:-100px;
+            left:250px;
+        }
+
+        .second-shape {
+            top:200px;
+            left:0px;
+        }
+
+        .third-shape {
+            top:100px;
+            left:450px;
+        }
+    }
+
+    .loading-animation-container {
+        height: 70vh;
+        width: 80%;
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+        // position: absolute;
+
+        .wrapper {
+            width: 60%;
+            margin: 0px auto 0px auto;
+            position: relative;
+            margin-top: 300px;
+
+            h1 {
+                width: 100%;
+                font-size: 3em;
+                position: absolute;
+                top: -100px;
+                font-family: 'Helvetica', 'Arial', sans-serif;
+                font-weight: 200;
+                color: white;
+                text-align: center;
+            }
+
+            .loading-panel {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                height: 50px;
+                width: 100%;
+                // background-color: white;
+                border: 5px solid white;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                // background-color: $DarkGreen;
+                z-index: 2;
+    
+                .white-line {
+                    height: 50px;
+                    width: 5px;
+                    background-color: white;
+                    transform: skew(-20deg);
+                }
+            }
+            .loading-panel-fill {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                height: 50px;
+                width: 0%;
+                z-index: 1;
+                background-color: $DarkGreen;
+            }
+        }
+    }
+}

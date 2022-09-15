@@ -2,7 +2,7 @@
   position: fixed;
   top: 20px;
   right: 50px;
-  z-index: 5;
+  z-index: 25;
 }
 
 .navbar .icon-menu-div .bar-container {
@@ -25,11 +25,11 @@
 }
 
 .navbar .icon-menu-div .bar-container:hover .bar1, .navbar .icon-menu-div .bar-container:hover .bar2, .navbar .icon-menu-div .bar-container:hover .bar3 {
-  background-color: #007A56;
+  background-color: #00A372;
 }
 
 .navbar .first-animation {
-  background-color: #007A56;
+  background-color: #00A372;
   -webkit-transition: -webkit-transform 0.7s;
   transition: -webkit-transform 0.7s;
   transition: transform 0.7s;
@@ -64,9 +64,12 @@
   display: block;
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
+  left: 0px;
+  top: 0px;
   -webkit-transform: translate(100%, 0%);
           transform: translate(100%, 0%);
+  z-index: 20;
 }
 
 .navbar .change-transform {
@@ -120,7 +123,7 @@
   transition: .5s;
   -webkit-transform: translateZ(-1px);
           transform: translateZ(-1px);
-  background-color: #007A56;
+  background-color: #00A372;
 }
 
 .navbar .menu-div .links-wrapper h1:hover::before {

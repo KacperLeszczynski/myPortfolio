@@ -1,0 +1,129 @@
+.main-page-container {
+  width: 90%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.main-page-container .front-page-container {
+  width: 60%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.main-page-container .front-page-container .front-page-text {
+  width: 60%;
+  font-size: 2.5em;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: white;
+  z-index: 5;
+}
+
+.main-page-container .front-page-container .first-shape, .main-page-container .front-page-container .second-shape, .main-page-container .front-page-container .third-shape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.main-page-container .front-page-container .first-shape {
+  top: -100px;
+  left: 250px;
+}
+
+.main-page-container .front-page-container .second-shape {
+  top: 200px;
+  left: 0px;
+}
+
+.main-page-container .front-page-container .third-shape {
+  top: 100px;
+  left: 450px;
+}
+
+.main-page-container .loading-animation-container {
+  height: 70vh;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-page-container .loading-animation-container .wrapper {
+  width: 60%;
+  margin: 0px auto 0px auto;
+  position: relative;
+  margin-top: 300px;
+}
+
+.main-page-container .loading-animation-container .wrapper h1 {
+  width: 100%;
+  font-size: 3em;
+  position: absolute;
+  top: -100px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+}
+
+.main-page-container .loading-animation-container .wrapper .loading-panel {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  width: 100%;
+  border: 5px solid white;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 2;
+}
+
+.main-page-container .loading-animation-container .wrapper .loading-panel .white-line {
+  height: 50px;
+  width: 5px;
+  background-color: white;
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+}
+
+.main-page-container .loading-animation-container .wrapper .loading-panel-fill {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 50px;
+  width: 0%;
+  z-index: 1;
+  background-color: #00A372;
+}
+/*# sourceMappingURL=MainPage.css.map */

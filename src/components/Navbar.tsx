@@ -1,10 +1,10 @@
 import { time } from "console";
-import React from "react";
+import React, { useState } from "react";
 import "../css/Navbar.css";
-const TIME_BETWEEN_DIVS_ANIMATE = 700;
 
 const Navbar = () => {
   function activateNav() {
+    const htmlWebsite = document.getElementsByTagName("html")[0];
     const navbarSite = document.querySelector(".navbar");
     const firstAnimation = document.querySelector(".first-animation");
     const secondAnimation = document.querySelector(".second-animation");
@@ -15,10 +15,17 @@ const Navbar = () => {
       navbarSite.classList.toggle("change");
     }
 
-    if (firstAnimation && secondAnimation && thirdAnimation && menuDiv) {
+    if (
+      firstAnimation &&
+      secondAnimation &&
+      thirdAnimation &&
+      menuDiv &&
+      htmlWebsite
+    ) {
       if (navbarSite?.classList.contains("change")) {
         setTimeout(() => {
           firstAnimation.classList.add("change-transform");
+          htmlWebsite.style.overflowY = "hidden";
           setTimeout(() => {
             secondAnimation.classList.add("change-transform");
             setTimeout(() => {
@@ -26,10 +33,10 @@ const Navbar = () => {
               setTimeout(() => {
                 menuDiv.classList.add("change-transform");
                 showHeadersMenu();
-              }, 400);
-            }, 500);
-          }, 500);
-        }, TIME_BETWEEN_DIVS_ANIMATE);
+              }, 350);
+            }, 400);
+          }, 400);
+        }, 400);
       } else
         setTimeout(() => {
           menuDiv.classList.remove("change-transform");
@@ -40,10 +47,11 @@ const Navbar = () => {
               secondAnimation.classList.remove("change-transform");
               setTimeout(() => {
                 firstAnimation.classList.remove("change-transform");
-              }, 400);
-            }, 500);
-          }, 500);
-        }, TIME_BETWEEN_DIVS_ANIMATE);
+                htmlWebsite.style.overflowY = "auto";
+              }, 350);
+            }, 400);
+          }, 400);
+        }, 400);
     }
   }
 
@@ -70,6 +78,15 @@ const Navbar = () => {
     }, 400);
   }
 
+  function changeScroll(
+    destination: string,
+    e: React.MouseEvent<HTMLHeadingElement, MouseEvent>
+  ) {
+    document?.getElementById(destination)?.scrollIntoView();
+    activateNav();
+    (e.target as Element).classList.add("change-opacity");
+  }
+
   return (
     <div className="navbar">
       <div className="icon-menu-div">
@@ -84,8 +101,8 @@ const Navbar = () => {
       <div className="third-animation"></div>
       <div className="menu-div">
         <div className="links-wrapper">
-          <h1>HOME</h1>
-          <h1>PROJECTS</h1>
+          <h1 onClick={(e) => changeScroll("home", e)}>HOME</h1>
+          <h1 onClick={(e) => changeScroll("project", e)}>PROJECTS</h1>
           <h1>ABOUT</h1>
           <h1>TRAINING</h1>
           <h1>CONTACT</h1>
