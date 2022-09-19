@@ -1,4 +1,4 @@
-.projects-tags {
+.projects-tags, .about-tags {
   font-family: 'Maven Pro', sans-serif;
   font-weight: 200;
   color: #00A372;
@@ -116,4 +116,98 @@
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
-/*# sourceMappingURL=Projects.css.map */
+
+.about-tags {
+  color: #ED7D3A;
+}
+
+.about-container-part {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about-container-part .about-container {
+  width: 90%;
+  margin: 50px auto 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 20px;
+}
+
+.about-container-part .about-container .about-text {
+  width: 100%;
+  height: 100%;
+}
+
+.about-container-part .about-container .about-image {
+  width: 100%;
+  height: 100%;
+}
+
+.about-container-part .about-container h1 {
+  text-align: left;
+  color: #ED7D3A;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-style: italic;
+  font-size: 2.5em;
+  font-weight: 100;
+}
+
+.about-container-part .about-container h2 {
+  text-align: left;
+  color: #00A372;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 100;
+  font-size: 1.5em;
+}
+
+.about-container-part .about-container h2:nth-of-type(3) {
+  color: #ED7D3A;
+}
+
+.about-container-part .about-container .download-pdf-button {
+  display: block;
+  width: 80%;
+  height: 50px;
+  background-color: #1D1E2C;
+  border: 1px solid #ED7D3A;
+  font-size: 25px;
+  color: white;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  text-decoration: none;
+  -webkit-transition: color 0.4s, background-color 0.4s;
+  transition: color 0.4s, background-color 0.4s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.about-container-part .about-container .download-pdf-button:hover {
+  color: #ED7D3A;
+  background-color: white;
+}
+/*# sourceMappingURL=About.css.map */

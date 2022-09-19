@@ -103,7 +103,7 @@ const Navbar = () => {
         <div className="links-wrapper">
           <h1 onClick={(e) => changeScroll("home", e)}>HOME</h1>
           <h1 onClick={(e) => changeScroll("project", e)}>PROJECTS</h1>
-          <h1>ABOUT</h1>
+          <h1 onClick={(e) => changeScroll("about", e)}>ABOUT</h1>
           <h1>TRAINING</h1>
           <h1>CONTACT</h1>
         </div>

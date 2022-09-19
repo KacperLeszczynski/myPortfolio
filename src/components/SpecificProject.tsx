@@ -5,11 +5,29 @@ const SpecificProject = (props: any) => {
   const { ref, inView, entry } = useInView({ threshold: 0.7 });
 
   useEffect(() => {
-    console.log(entry);
     if (inView) {
       entry?.target.classList.add("show");
-    } else {
-      entry?.target.classList.remove("show");
+      entry?.target.previousElementSibling?.classList.add("show-text");
+      entry?.target.previousElementSibling?.previousElementSibling?.classList.add(
+        "show-text"
+      );
+      entry?.target.previousElementSibling?.previousElementSibling?.previousElementSibling?.classList.add(
+        "show-text"
+      );
+      return;
+    }
+
+    if (entry) {
+      if (entry?.target.getBoundingClientRect().top > 0) {
+        entry?.target.classList.remove("show");
+        entry?.target.previousElementSibling?.classList.remove("show-text");
+        entry?.target.previousElementSibling?.previousElementSibling?.classList.remove(
+          "show-text"
+        );
+        entry?.target.previousElementSibling?.previousElementSibling?.previousElementSibling?.classList.remove(
+          "show-text"
+        );
+      }
     }
   }, [inView]);
 

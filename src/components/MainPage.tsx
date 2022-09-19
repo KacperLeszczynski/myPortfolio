@@ -1,5 +1,8 @@
 import React from "react";
 import "../css/MainPage.css";
+import About from "./About";
+import BeforeAboutQuote from "./BeforeAboutQuote";
+import BeforeContactQuote from "./BeforeContactQuote";
 import FrontPage from "./FrontPage";
 import LoadingAnimation from "./LoadingAnimation";
 import Projects from "./Projects";
@@ -11,6 +14,9 @@ const MainPage = () => {
       <FrontPage />
       <LoadingAnimation />
       <Projects />
+      <BeforeAboutQuote />
+      <About />
+      <BeforeContactQuote />
     </div>
   );
 };

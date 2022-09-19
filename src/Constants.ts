@@ -1,4 +1,4 @@
-const DEEP_PURPLE = "#583759";
+const DEEP_PURPLE = "#704672";
 const DARK_GREEN = "#00A372";
 const ORANGE = "#ED7D3A";
 const BACKGROUND_COLOR = "#1D1E2C";
