@@ -82,7 +82,8 @@
           width: 100%;
           font-family: 'Helvetica', 'Arial', sans-serif;
           font-weight: 100;
-          font-size: 5em;
+          // font-size: 5em;
+          font-size: 10vh;
           opacity: 0%;
           transition: opacity 0.4s;
           line-height: 1em;
@@ -138,3 +139,16 @@
       transform: rotate(45deg) translate(-9px, -13.5px);
     }
   }
+
+  @media screen and (max-width: 600px){
+    .navbar {
+        .menu-div {
+          .links-wrapper {
+            h1 {
+              text-align: center;
+              font-size: 13vw;
+            }
+          }
+        }
+  }
+}

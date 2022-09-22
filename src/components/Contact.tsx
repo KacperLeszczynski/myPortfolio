@@ -1,7 +1,178 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+import "../css/Contact.css";
+import { DARK_GREEN, DEEP_PURPLE } from "../Constants";
+import { BiSend } from "react-icons/bi";
+import { AiOutlineMail } from "react-icons/ai";
+
+const validateEmail = (email: string) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
 
 const Contact = () => {
-  return <div className="contact-part"></div>;
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const nameRef = useRef<HTMLSpanElement>(null);
+  const emailRef = useRef<HTMLSpanElement>(null);
+  const messageRef = useRef<HTMLSpanElement>(null);
+  const [messageSuccess, setMessageSuccess] = useState("");
+
+  const EmailClicked = () => {
+    const textUnderline = document.getElementsByClassName(
+      "text-underline"
+    ) as HTMLCollectionOf<HTMLElement>;
+
+    const wrapper = document.getElementById("wrapper-email");
+    textUnderline[0].style.backgroundColor = DEEP_PURPLE;
+    wrapper?.classList.add("clicked");
+
+    navigator.clipboard.writeText("kacper.8leszczynski8@gmail.com");
+  };
+
+  const onFocus = (
+    e:
+      | React.FocusEvent<HTMLInputElement>
+      | React.FocusEvent<HTMLTextAreaElement>
+  ) => {
+    e.target.nextElementSibling?.classList.add("change-translateY");
+  };
+
+  const onBlur = (
+    e:
+      | React.FocusEvent<HTMLInputElement>
+      | React.FocusEvent<HTMLTextAreaElement>
+  ) => {
+    //if value is written then dont change place of label
+    if (e.target.value) return;
+    e.target.nextElementSibling?.classList.remove("change-translateY");
+  };
+
+  const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.target as Element;
+    if (!name) {
+      if (nameRef.current) {
+        nameRef.current!.innerHTML = "PLEASE ENTER NAME";
+      }
+      return;
+    }
+    if (!email) {
+      if (emailRef.current) {
+        emailRef.current!.innerHTML = "PLEASE ENTER EMAIL";
+      }
+      return;
+    }
+
+    if (validateEmail(email) == null) {
+      if (emailRef.current) {
+        emailRef.current!.innerHTML = "PLEASE ENTER CORRECT EMAIL";
+      }
+      return;
+    }
+
+    if (!message) {
+      if (messageRef.current) {
+        messageRef.current!.innerHTML = "PLEASE ENTER MESSAGE";
+      }
+      return;
+    }
+    console.log("yay");
+
+    const submitButton = document.getElementsByClassName(
+      "icon-send"
+    ) as HTMLCollectionOf<HTMLElement>;
+    // submitButton[0].style.color = DARK_GREEN;
+    setMessageSuccess("Message sent!");
+    setEmail("");
+    setName("");
+    setMessage("");
+  };
+
+  return (
+    <div className="contact-part" id="contact">
+      <h1 className="contact-tags">{"<contact>"}</h1>
+      <div className="contact-container">
+        <div className="headline">
+          <h1>Feel free to contact me on&nbsp;</h1>
+          <div className="wrapper" id="wrapper-email">
+            <h1 onClick={EmailClicked}>kacper.8leszczynski8@gmail.com</h1>
+            <div className="text-underline"></div>
+          </div>
+          <br />
+          <br />
+          <h1>Alternatively you can write here!</h1>
+          <form
+            className="message-form"
+            autoComplete="off"
+            onSubmit={(e) => handleForm(e)}
+          >
+            <div>
+              <input
+                type="text"
+                className="input-field"
+                autoComplete="new-password"
+                placeholder=""
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                onFocus={(e) => onFocus(e)}
+                onBlur={(e) => onBlur(e)}
+              />
+              <label htmlFor="" className="input-label">
+                <span className="label-name" ref={nameRef}>
+                  NAME
+                </span>
+              </label>
+            </div>
+            <div>
+              <input
+                type="text"
+                className="input-field"
+                autoComplete="new-password"
+                placeholder=""
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onFocus={(e) => onFocus(e)}
+                onBlur={(e) => onBlur(e)}
+              />
+              <label htmlFor="" className="input-label">
+                <span className="label-name" ref={emailRef}>
+                  EMAIL
+                </span>
+              </label>
+            </div>
+            <div>
+              <textarea
+                className="input-field"
+                autoComplete="new-password"
+                placeholder=""
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                onFocus={(e) => onFocus(e)}
+                onBlur={(e) => onBlur(e)}
+              />
+              <label htmlFor="" className="input-label">
+                <span className="label-name" ref={messageRef}>
+                  MESSAGE
+                </span>
+              </label>
+            </div>
+            <br />
+            <br />
+            <label>
+              <input type="submit" />
+              <BiSend size="60px" className="icon-send" />
+            </label>
+          </form>
+          <h1 className="message-sent-notifications">{messageSuccess}</h1>
+        </div>
+      </div>
+      <h1 className="contact-tags">{"</contact>"}</h1>
+    </div>
+  );
 };
 
 export default Contact;

@@ -104,8 +104,7 @@ const Navbar = () => {
           <h1 onClick={(e) => changeScroll("home", e)}>HOME</h1>
           <h1 onClick={(e) => changeScroll("project", e)}>PROJECTS</h1>
           <h1 onClick={(e) => changeScroll("about", e)}>ABOUT</h1>
-          <h1>TRAINING</h1>
-          <h1>CONTACT</h1>
+          <h1 onClick={(e) => changeScroll("contact", e)}>CONTACT</h1>
         </div>
       </div>
     </div>

@@ -28,7 +28,6 @@ const BeforeContactQuote = () => {
   useEffect(() => {
     if (inView) {
       var texts = document.querySelectorAll("text");
-      console.log(texts);
       for (var i = 0; i < texts.length; i++) {
         makeBG(texts[i]);
       }
@@ -40,7 +39,12 @@ const BeforeContactQuote = () => {
       <Scene duration={800} triggerHook={1} offset={400}>
         {(progress: any) => (
           <div className="before-about-contact-div">
-            <svg className="main-svg" id="the-main-svg">
+            <svg
+              className="main-svg"
+              id="the-main-svg"
+              width="100%"
+              viewBox="0 0 800 600"
+            >
               <Timeline totalProgress={progress} paused>
                 <Tween
                   from={{ strokeDashoffset: 1800 }}
@@ -69,8 +73,8 @@ const BeforeContactQuote = () => {
                     opacity: "100%",
                   }}
                 >
-                  <text ref={ref} x="160" y="320" className="main-text">
-                    “IT WILL WORK”
+                  <text ref={ref} x="200" y="320" className="main-text">
+                    “DO IT RIGHT”
                   </text>
                 </Tween>
               </Timeline>

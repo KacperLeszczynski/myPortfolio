@@ -1,6 +1,7 @@
 .projects-tags {
   font-family: 'Maven Pro', sans-serif;
   font-weight: 200;
+  font-size: 2em;
   color: #00A372;
 }
 
@@ -22,8 +23,7 @@
 }
 
 .projects-container-part .projects-container .project {
-  height: 200px;
-  border: 4px solid #00A372;
+  border: 2px solid #00A372;
   margin-top: 30px;
 }
 
@@ -36,6 +36,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 10px 20px 10px 20px;
   position: relative;
   overflow: hidden;
@@ -68,9 +70,9 @@
 }
 
 .projects-container-part .projects-container .project .project-detail-wrapper p {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
   font-family: 'Maven Pro', sans-serif;
   font-weight: 200;
   color: white;
@@ -115,5 +117,68 @@
 .projects-container-part .projects-container .project .project-detail-wrapper .show-text {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
+}
+
+@media screen and (max-width: 1200px) {
+  .projects-container-part .projects-container .project .project-detail-wrapper h1 {
+    font-size: 1.8em;
+  }
+  .projects-container-part .projects-container .project .project-detail-wrapper p {
+    font-size: 1.2em;
+  }
+  .projects-container-part .projects-container .project .project-detail-wrapper a {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .projects-tags {
+    font-size: 1.8em;
+  }
+  .projects-container-part {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-tags {
+    font-size: 1.6em;
+  }
+  .projects-container-part {
+    width: 90%;
+  }
+  .projects-container-part .projects-container {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .projects-container-part .projects-container .project .project-detail-wrapper h1 {
+    font-size: 1.5em;
+  }
+  .projects-container-part .projects-container .project .project-detail-wrapper p {
+    font-size: 1.0em;
+  }
+  .projects-container-part .projects-container .project .project-detail-wrapper a {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects-tags {
+    width: 90%;
+    font-size: 1.5em;
+  }
+  .projects-container-part {
+    width: 90%;
+  }
+  .projects-container-part .projects-container .project .project-detail-wrapper h1 {
+    font-size: 1.4em;
+  }
+  .projects-container-part .projects-container .project .project-detail-wrapper p {
+    font-size: 0.95em;
+  }
+  .projects-container-part .projects-container .project .project-detail-wrapper a {
+    font-size: 1em;
+  }
 }
 /*# sourceMappingURL=Projects.css.map */

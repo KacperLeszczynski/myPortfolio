@@ -3,6 +3,7 @@ import "../css/MainPage.css";
 import About from "./About";
 import BeforeAboutQuote from "./BeforeAboutQuote";
 import BeforeContactQuote from "./BeforeContactQuote";
+import Contact from "./Contact";
 import FrontPage from "./FrontPage";
 import LoadingAnimation from "./LoadingAnimation";
 import Projects from "./Projects";
@@ -17,6 +18,7 @@ const MainPage = () => {
       <BeforeAboutQuote />
       <About />
       <BeforeContactQuote />
+      <Contact />
     </div>
   );
 };

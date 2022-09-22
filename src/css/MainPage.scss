@@ -20,7 +20,7 @@
 
         .front-page-text {
             width:60%;
-            font-size: 2.5em;
+            font-size: 2.4vw;
             font-family: 'Helvetica', 'Arial', sans-serif;
             // font-weight: 400;
             color: white;
@@ -79,11 +79,11 @@
                 position: absolute;
                 top: 0px;
                 left: 0px;
-                height: 50px;
-                width: 100%;
+                height:50px;
+                width: calc(100%);
                 // background-color: white;
-                border: 5px solid white;
-                border-radius: 8px;
+                border: 4px solid white;
+                // border-radius: 8px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
@@ -92,15 +92,15 @@
     
                 .white-line {
                     height: 50px;
-                    width: 5px;
+                    width: 4px;
                     background-color: white;
                     transform: skew(-20deg);
                 }
             }
             .loading-panel-fill {
                 position: absolute;
-                top: 5px;
-                left: 5px;
+                top: 4px;
+                left: 4px;
                 height: 50px;
                 width: 0%;
                 z-index: 1;
@@ -169,4 +169,156 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 1200px) {
+    .main-page-container {
+        .front-page-container {
+            .first-shape, .second-shape, .third-shape {
+                transform: scale(0.9);
+            }
+
+            .front-page-text {
+                font-size: 3.4vw;
+            }
+
+            .first-shape {
+                top:-40px;
+                left:250px;
+            }
+    
+            .second-shape {
+                top:200px;
+                left:40px;
+            }
+    
+            .third-shape {
+                top:140px;
+                left:450px;
+            }
+        }
+
+        .loading-animation-container { 
+            .wrapper {
+                width: 80%;
+            }
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 992px)   {
+    .main-page-container {
+        .front-page-container {
+            width:80%;
+            .first-shape, .second-shape, .third-shape {
+                transform: scale(0.85);
+            }
+
+            .front-page-text {
+                font-size: 4.3vw;
+                width:70%;
+            }
+
+            .first-shape {
+                // transform: scale(0.80);
+                top:-40px;
+                left:200px;
+            }
+
+            .second-shape {
+                top:200px;
+                left:40px;
+            }
+
+            .third-shape {
+                top:140px;
+                left:350px;
+            }
+        }
+
+        .loading-animation-container { 
+            .wrapper {
+                width: 90%;
+
+                h1 {
+                    font-size: 2.5em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px)   {
+    .main-page-container {
+    .front-page-container {
+        width: 90%;
+        .first-shape, .second-shape, .third-shape {
+            transform: scale(0.8);
+        }
+
+        .front-page-text {
+            font-size: 6vw;
+            width:80%;
+        }
+
+        .first-shape {
+            top:-50px;
+            left:100px;
+        }
+
+        .second-shape {
+            top:200px;
+            left:-40px;
+        }
+
+        .third-shape {
+            top:140px;
+            left:200px;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 600px)   {
+    .main-page-container {
+    .front-page-container {
+        width: 100%;
+        .first-shape, .second-shape, .third-shape {
+            transform: scale(0.68);
+        }
+
+        .front-page-text {
+            font-size: 7vw;
+            width:100%;
+        }
+
+        .first-shape {
+            transform: scale(0.55);
+            height: 150vh;
+            width: 150vw;
+            top:-150px;
+            left:-30px;
+
+            // div {
+            //     canvas {
+            //         height: 1000px;
+            //         width: 1000px;
+            //     }
+            // }
+            // transform: scale(0.65);
+        }
+
+        .second-shape {
+            top:200px;
+            left:-40px;
+        }
+
+        .third-shape {
+            top:140px;
+            left:150px;
+        }
+    }
+}
 }

@@ -33,7 +33,6 @@ const BeforeAboutQuote = () => {
   useEffect(() => {
     if (inView) {
       var texts = document.querySelectorAll("text");
-      console.log(texts);
       for (var i = 0; i < texts.length; i++) {
         makeBG(texts[i]);
       }
@@ -46,7 +45,12 @@ const BeforeAboutQuote = () => {
       <Scene duration={700} triggerHook={1} offset={400}>
         {(progress: any) => (
           <div className="before-about-quote-div" ref={ref}>
-            <svg className="main-svg" id="the-main-svg">
+            <svg
+              className="main-svg"
+              id="the-main-svg"
+              width="100%"
+              viewBox="0 0 800 600"
+            >
               <Timeline totalProgress={progress} paused>
                 <Tween
                   from={{ strokeDashoffset: 1300 }}

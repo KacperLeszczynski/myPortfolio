@@ -80,3 +80,91 @@
             }
     }
 }
+
+
+@media screen and (max-width: 1400px){
+    .about-container-part {
+        // width: 90%;
+        .about-container {
+            .about-text {
+                h1 {
+                    font-size: 2.2em;
+                    font-weight: 100;
+                }
+                
+                h2 {
+                    font-size: 1.4em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .about-container-part {
+        // width: 90%;
+        .about-container {
+            .about-text {
+                h1 {
+                    font-size: 2.0em;
+                    font-weight: 100;
+                }
+                
+                h2 {
+                    font-size: 1.2em;
+                }
+            }
+
+            // h2:nth-of-type(3) {
+            //     // color: $Orange;
+            // }
+        }
+    }
+}
+
+@media screen and (max-width: 968px){
+    .about-tags {
+        font-size: 1.8em;
+    }
+
+    .about-container-part {
+        width: 90%;
+
+        .about-container {
+            width: 95%;
+        }
+    }
+}
+
+@media screen and (max-width: 900px){ 
+    .about-container-part {
+        
+        .about-container {
+            width: 100%;
+            
+            flex-direction: column;
+
+            .about-text {
+                // h1 {
+                //     text-align: center;
+                // }
+                
+                // h2 {
+                //     text-align: center;
+                // }
+
+                // .download-pdf-button {
+                //     margin: auto;
+                // }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px){ 
+    .about-tags {
+        font-size: 1.6em;
+    }
+
+}
