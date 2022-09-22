@@ -109,7 +109,7 @@
 }
 
 .main-page-container .loading-animation-container .wrapper .loading-panel .white-line {
-  height: 50px;
+  height: 54px;
   width: 4px;
   background-color: white;
   -webkit-transform: skew(-20deg);
@@ -120,7 +120,7 @@
   position: absolute;
   top: 4px;
   left: 4px;
-  height: 50px;
+  height: 54px;
   width: 0%;
   z-index: 1;
   background-color: #00A372;

@@ -1,5 +1,6 @@
 import { time } from "console";
 import React, { useState } from "react";
+import { DARK_GREEN, ORANGE } from "../Constants";
 import "../css/Navbar.css";
 
 const Navbar = () => {
@@ -85,6 +86,10 @@ const Navbar = () => {
     document?.getElementById(destination)?.scrollIntoView();
     activateNav();
     (e.target as Element).classList.add("change-opacity");
+    (e.target as HTMLElement).style.backgroundColor = DARK_GREEN;
+    setTimeout(() => {
+      (e.target as HTMLElement).style.backgroundColor = "transparent";
+    }, 500);
   }
 
   return (

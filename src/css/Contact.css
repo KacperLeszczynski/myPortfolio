@@ -31,7 +31,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: calc(100% - 20px);
+  height: 150px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

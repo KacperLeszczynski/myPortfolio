@@ -78,7 +78,7 @@ const BeforeAboutQuote = () => {
               <Timeline totalProgress={progress} paused>
                 <Tween
                   from={{ transform: "translateX(70px)" }}
-                  to={{ transform: "translateX(0px)" }}
+                  to={{ transform: "translateX(-10px)" }}
                 >
                   <text x="100" y="180" className="main-text">
                     IT WILL WORK”

@@ -85,7 +85,8 @@
           // font-size: 5em;
           font-size: 10vh;
           opacity: 0%;
-          transition: opacity 0.4s;
+          background-color: transparent;
+          transition: opacity 0.4s, background-color 0.2s ;
           line-height: 1em;
           margin-top: 15px;
           color: white;

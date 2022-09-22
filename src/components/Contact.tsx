@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "../css/Contact.css";
 import { DARK_GREEN, DEEP_PURPLE } from "../Constants";
 import { BiSend } from "react-icons/bi";
-import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineDribbbleSquare, AiOutlineMail } from "react-icons/ai";
 
 const validateEmail = (email: string) => {
   return String(email)
@@ -90,6 +90,17 @@ const Contact = () => {
     setEmail("");
     setName("");
     setMessage("");
+
+    nameRef.current!.innerHTML = "NAME";
+    emailRef.current!.innerHTML = "EMAIL";
+    messageRef.current!.innerHTML = "MESSAGE";
+
+    //put back labels to place
+    nameRef.current!.parentElement!.classList.remove("change-translateY");
+    emailRef.current!.parentElement!.classList.remove("change-translateY");
+    messageRef.current!.parentElement!.classList.remove("change-translateY");
+
+    console.log(nameRef.current!.classList);
   };
 
   return (

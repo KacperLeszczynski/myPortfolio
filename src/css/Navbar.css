@@ -102,8 +102,9 @@
   font-weight: 100;
   font-size: 10vh;
   opacity: 0%;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
+  background-color: transparent;
+  -webkit-transition: opacity 0.4s, background-color 0.2s;
+  transition: opacity 0.4s, background-color 0.2s;
   line-height: 1em;
   margin-top: 15px;
   color: white;
