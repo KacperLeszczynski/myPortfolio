@@ -1,9 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../css/About.css";
+import MyPhoto from "./MyPhoto";
+import PythonIcon from "../files/icons/PythonIcon";
 import KacperLeszczynskiCV from "../files/KacperLeszczynskiCV.pdf";
-import { saveAs } from "file-saver";
+import {
+  DEEP_PURPLE,
+  DARK_GREEN,
+  ORANGE,
+  BACKGROUND_COLOR,
+} from "../Constants";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  const { ref, inView, entry } = useInView({ threshold: 0.2 });
+
+  useEffect(() => {
+    console.log("1");
+
+    if (inView) {
+      console.log("2");
+      const element = entry?.target as HTMLElement;
+      const triangle = element.children[0] as HTMLElement;
+      const image = element.children[1] as HTMLElement;
+      triangle.style.transform = "matrix(1,0,0,1,0,0)";
+      image.style.transform = "matrix(1,0,0,1,0,0)";
+      return;
+    }
+
+    if (entry) {
+      if (entry?.target.getBoundingClientRect().top > 0) {
+        const element = entry?.target as HTMLElement;
+        const triangle = element.children[0] as HTMLElement;
+        const image = element.children[1] as HTMLElement;
+        triangle.style.transform = "matrix(0.01,0,0,0.01,300,90)";
+        image.style.transform = "matrix(0.0001,0,0,0.0001,300,440)";
+      }
+    }
+  }, [inView]);
+
   return (
     <div className="about-container-part" id="about">
       <h1 className="about-tags">{"<about>"}</h1>
@@ -39,7 +73,26 @@ const About = () => {
             CV (PDF)
           </a>
         </div>
-        <div className="about-image"></div>
+        <div className="about-image">
+          <svg
+            className="main-svg-about"
+            ref={ref}
+            width="100%"
+            viewBox="0 0 600 600"
+          >
+            <path
+              d="M100 446 L500 446 L300 100 Z"
+              fill="none"
+              stroke={ORANGE}
+              strokeWidth={12}
+              className="triangle-path"
+            />
+            <MyPhoto />
+          </svg>
+          <div className="programm-div">
+            <PythonIcon />
+          </div>
+        </div>
       </div>
       <h1 className="about-tags">{"</about>"}</h1>
     </div>

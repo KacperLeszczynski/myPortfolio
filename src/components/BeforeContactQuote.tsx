@@ -36,7 +36,7 @@ const BeforeContactQuote = () => {
 
   return (
     <Controller>
-      <Scene duration={800} triggerHook={1} offset={400}>
+      <Scene duration={800} triggerHook={1} offset={500}>
         {(progress: any) => (
           <div className="before-about-contact-div">
             <svg

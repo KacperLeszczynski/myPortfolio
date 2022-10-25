@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import "../css/Contact.css";
-import { DARK_GREEN, DEEP_PURPLE } from "../Constants";
+import { DARK_GREEN, DEEP_PURPLE, USER_ID } from "../Constants";
 import { BiSend } from "react-icons/bi";
-import { AiOutlineDribbbleSquare, AiOutlineMail } from "react-icons/ai";
+import emailjs from "emailjs-com";
 
 const validateEmail = (email: string) => {
   return String(email)
@@ -19,6 +19,7 @@ const Contact = () => {
   const nameRef = useRef<HTMLSpanElement>(null);
   const emailRef = useRef<HTMLSpanElement>(null);
   const messageRef = useRef<HTMLSpanElement>(null);
+  const form = useRef<HTMLFormElement>(null);
   const [messageSuccess, setMessageSuccess] = useState("");
 
   const EmailClicked = () => {
@@ -51,9 +52,33 @@ const Contact = () => {
     e.target.nextElementSibling?.classList.remove("change-translateY");
   };
 
+  const sendEmail = () => {
+    const prop = form.current as string | HTMLFormElement;
+    console.log("first");
+
+    if (!email || !name || !message) {
+      return;
+    }
+
+    emailjs.sendForm("service_uuzrhlf", "template_1sbi0vm", prop, USER_ID).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+
+    console.log("second");
+  };
+
   const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.target as Element;
+    // const form = e.target as Element;
+
+    sendEmail();
+
+    //work with label
     if (!name) {
       if (nameRef.current) {
         nameRef.current!.innerHTML = "PLEASE ENTER NAME";
@@ -117,6 +142,7 @@ const Contact = () => {
           <br />
           <h1>Alternatively you can write here!</h1>
           <form
+            ref={form}
             className="message-form"
             autoComplete="off"
             onSubmit={(e) => handleForm(e)}
@@ -131,6 +157,7 @@ const Contact = () => {
                 onChange={(e) => setName(e.target.value)}
                 onFocus={(e) => onFocus(e)}
                 onBlur={(e) => onBlur(e)}
+                name="name"
               />
               <label htmlFor="" className="input-label">
                 <span className="label-name" ref={nameRef}>
@@ -148,6 +175,7 @@ const Contact = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 onFocus={(e) => onFocus(e)}
                 onBlur={(e) => onBlur(e)}
+                name="email"
               />
               <label htmlFor="" className="input-label">
                 <span className="label-name" ref={emailRef}>
@@ -164,6 +192,7 @@ const Contact = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 onFocus={(e) => onFocus(e)}
                 onBlur={(e) => onBlur(e)}
+                name="message"
               />
               <label htmlFor="" className="input-label">
                 <span className="label-name" ref={messageRef}>

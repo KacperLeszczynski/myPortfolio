@@ -24,20 +24,21 @@
 
 .projects-container-part .projects-container .project {
   border: 2px solid #00A372;
-  margin-top: 30px;
+  margin-top: 40px;
+  position: relative;
 }
 
 .projects-container-part .projects-container .project .project-detail-wrapper {
+  zoom: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 150px;
+  height: 200px;
+  min-height: inherit;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   padding: 10px 20px 10px 20px;
   position: relative;
   overflow: hidden;
@@ -66,7 +67,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-size: 2em;
+  font-size: 2.1em;
 }
 
 .projects-container-part .projects-container .project .project-detail-wrapper p {
@@ -76,7 +77,7 @@
   font-family: 'Maven Pro', sans-serif;
   font-weight: 200;
   color: white;
-  font-size: 1.4em;
+  font-size: 1.6em;
 }
 
 .projects-container-part .projects-container .project .project-detail-wrapper a {
@@ -85,7 +86,8 @@
           flex: 1;
   font-family: 'Maven Pro', sans-serif;
   color: #00A372;
-  font-size: 1.5em;
+  font-size: 1.7em;
+  text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,25 +95,27 @@
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  -webkit-transition: color 0.6s;
-  transition: color 0.6s;
+  -webkit-transition: color 2s;
+  transition: color 2s;
+  -webkit-transform: translateY(230px);
+          transform: translateY(230px);
+  -webkit-transition: color 0.2s, -webkit-transform 0.4s ease-out 0.6s;
+  transition: color 0.2s, -webkit-transform 0.4s ease-out 0.6s;
+  transition: transform 0.4s ease-out 0.6s, color 0.2s;
+  transition: transform 0.4s ease-out 0.6s, color 0.2s, -webkit-transform 0.4s ease-out 0.6s;
 }
 
 .projects-container-part .projects-container .project .project-detail-wrapper a:hover {
   color: #a3ffe3;
 }
 
-.projects-container-part .projects-container .project .project-detail-wrapper h1, .projects-container-part .projects-container .project .project-detail-wrapper p, .projects-container-part .projects-container .project .project-detail-wrapper a {
-  -webkit-transform: translateY(200px);
-          transform: translateY(200px);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
+.projects-container-part .projects-container .project .project-detail-wrapper h1, .projects-container-part .projects-container .project .project-detail-wrapper p {
+  -webkit-transform: translateY(230px);
+          transform: translateY(230px);
+  -webkit-transition: -webkit-transform 0.4s ease-out 0.6s;
+  transition: -webkit-transform 0.4s ease-out 0.6s;
+  transition: transform 0.4s ease-out 0.6s;
+  transition: transform 0.4s ease-out 0.6s, -webkit-transform 0.4s ease-out 0.6s;
 }
 
 .projects-container-part .projects-container .project .project-detail-wrapper .show-text {
@@ -221,12 +225,7 @@
   height: 100%;
 }
 
-.about-container-part .about-container .about-image {
-  width: 100%;
-  height: 100%;
-}
-
-.about-container-part .about-container h1 {
+.about-container-part .about-container .about-text h1 {
   text-align: left;
   color: #ED7D3A;
   font-family: 'Helvetica', 'Arial', sans-serif;
@@ -235,7 +234,7 @@
   font-weight: 100;
 }
 
-.about-container-part .about-container h2 {
+.about-container-part .about-container .about-text h2 {
   text-align: left;
   color: #00A372;
   font-family: 'Helvetica', 'Arial', sans-serif;
@@ -243,11 +242,11 @@
   font-size: 1.5em;
 }
 
-.about-container-part .about-container h2:nth-of-type(3) {
+.about-container-part .about-container .about-text h2:nth-of-type(3) {
   color: #ED7D3A;
 }
 
-.about-container-part .about-container .download-pdf-button {
+.about-container-part .about-container .about-text .download-pdf-button {
   display: block;
   width: 80%;
   height: 50px;
@@ -271,9 +270,40 @@
   cursor: pointer;
 }
 
-.about-container-part .about-container .download-pdf-button:hover {
+.about-container-part .about-container .about-text .download-pdf-button:hover {
   color: #ED7D3A;
   background-color: white;
+}
+
+.about-container-part .about-container .about-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.about-container-part .about-container .about-image .main-svg-about path {
+  -webkit-transform: matrix(0.01, 0, 0, 0.01, 300, 90);
+          transform: matrix(0.01, 0, 0, 0.01, 300, 90);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.about-container-part .about-container .about-image .main-svg-about .my-photo {
+  -webkit-transform: matrix(0.0001, 0, 0, 0.0001, 300, 440);
+          transform: matrix(0.0001, 0, 0, 0.0001, 300, 440);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.about-container-part .about-container .about-image .programm-div {
+  height: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1400px) {
@@ -312,9 +342,9 @@
   .about-container-part .about-container {
     width: 100%;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 

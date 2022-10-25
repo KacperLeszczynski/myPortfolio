@@ -27,14 +27,6 @@
             width:100%;
             height: 100%;
             // background-color: red;
-        }
-
-        .about-image {
-            width:100%;
-            height: 100%;
-            // background-color: green;
-        }
-
             h1 {
                 text-align: left;
                 color: $Orange;
@@ -78,6 +70,36 @@
                     background-color: white;
                 }
             }
+        }
+
+        .about-image {
+            width:100%;
+            height: 100%;
+            // background-color: green;
+            position: relative;
+            
+            .main-svg-about {
+                // background-color: beige;
+                path {
+                    // transform: matrix(0.4,0,0,0.4,150,150);
+                    transform: matrix(0.01,0,0,0.01,300,90);
+                    transition: transform 1s;
+                }
+
+                .my-photo {
+                    // position: ;
+    
+                    transform: matrix(0.0001,0,0,0.0001,300,440);
+                    transition: transform 1s;
+                    transition-delay: 1s;
+                }
+            }
+            .programm-div {
+                height: 100%;
+                width: 100%;
+                // width: 100px;
+            }
+        }
     }
 }
 
@@ -142,21 +164,8 @@
         .about-container {
             width: 100%;
             
-            flex-direction: column;
+            flex-direction: column-reverse;
 
-            .about-text {
-                // h1 {
-                //     text-align: center;
-                // }
-                
-                // h2 {
-                //     text-align: center;
-                // }
-
-                // .download-pdf-button {
-                //     margin: auto;
-                // }
-            }
         }
     }
 }

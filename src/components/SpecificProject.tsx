@@ -14,6 +14,9 @@ const SpecificProject = (props: any) => {
       entry?.target.previousElementSibling?.previousElementSibling?.previousElementSibling?.classList.add(
         "show-text"
       );
+      entry?.target.previousElementSibling?.previousElementSibling?.previousElementSibling?.previousElementSibling?.classList.add(
+        "show-text"
+      );
       return;
     }
 
@@ -27,6 +30,9 @@ const SpecificProject = (props: any) => {
         entry?.target.previousElementSibling?.previousElementSibling?.previousElementSibling?.classList.remove(
           "show-text"
         );
+        entry?.target.previousElementSibling?.previousElementSibling?.previousElementSibling?.previousElementSibling?.classList.remove(
+          "show-text"
+        );
       }
     }
   }, [inView]);
@@ -36,7 +42,12 @@ const SpecificProject = (props: any) => {
       <div className="project-detail-wrapper">
         <h1>{props.header}</h1>
         <p>{props.text}</p>
-        <a>{props.buttonText}</a>
+        <a target="_blank" href={props.codeLink}>
+          Visit code
+        </a>
+        <a target="_blank" href={props.projectLink}>
+          {props.buttonText}
+        </a>
         <div className="project-fill" ref={ref}></div>
       </div>
     </div>
