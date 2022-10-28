@@ -2,7 +2,7 @@ import { ChildProcess } from "child_process";
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-const PythonIcon = () => {
+const ProgLags = () => {
   const { ref, inView, entry } = useInView({ threshold: 1 });
 
   useEffect(() => {
@@ -76,4 +76,4 @@ const PythonIcon = () => {
   );
 };
 
-export default PythonIcon;
+export default ProgLags;

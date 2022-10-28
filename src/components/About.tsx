@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../css/About.css";
 import MyPhoto from "./MyPhoto";
-import PythonIcon from "../files/icons/PythonIcon";
+import ProgLags from "../files/icons/ProgLangs";
 import KacperLeszczynskiCV from "../files/KacperLeszczynskiCV.pdf";
 import {
   DEEP_PURPLE,
@@ -90,7 +90,7 @@ const About = () => {
             <MyPhoto />
           </svg>
           <div className="programm-div">
-            <PythonIcon />
+            <ProgLags />
           </div>
         </div>
       </div>

@@ -45,9 +45,11 @@ const SpecificProject = (props: any) => {
         <a target="_blank" href={props.codeLink}>
           Visit code
         </a>
-        <a target="_blank" href={props.projectLink}>
-          {props.buttonText}
-        </a>
+        {props.projectLink &&
+                  <a target="_blank" href={props.projectLink}>
+                  {props.buttonText}
+                </a>
+        }
         <div className="project-fill" ref={ref}></div>
       </div>
     </div>

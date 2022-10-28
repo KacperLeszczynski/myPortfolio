@@ -8,6 +8,7 @@ import {
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 import { useInView } from "react-intersection-observer";
+import GeometryIcon from "../files/GeometryIcon";
 
 function makeBG(elem: SVGTextElement) {
   var svgns = "http://www.w3.org/2000/svg";
@@ -39,6 +40,8 @@ const BeforeContactQuote = () => {
       <Scene duration={800} triggerHook={1} offset={500}>
         {(progress: any) => (
           <div className="before-about-contact-div">
+            <GeometryIcon color={DEEP_PURPLE} classname="right-icon-svg" progress={progress}/>
+            <GeometryIcon color={DEEP_PURPLE} classname="left-icon-svg" progress={progress}/>
             <svg
               className="main-svg"
               id="the-main-svg"

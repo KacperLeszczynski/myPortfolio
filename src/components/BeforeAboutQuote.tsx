@@ -5,6 +5,7 @@ import {
   ORANGE,
   BACKGROUND_COLOR,
 } from "../Constants";
+import GeometryIcon from "../files/GeometryIcon";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 import { useInView } from "react-intersection-observer";
@@ -45,6 +46,8 @@ const BeforeAboutQuote = () => {
       <Scene duration={700} triggerHook={1} offset={400}>
         {(progress: any) => (
           <div className="before-about-quote-div" ref={ref}>
+            <GeometryIcon color={ORANGE} classname="right-icon-svg" progress={progress}/>
+            <GeometryIcon color={ORANGE} classname="left-icon-svg" progress={progress}/>
             <svg
               className="main-svg"
               id="the-main-svg"
