@@ -44,9 +44,7 @@ const About = () => {
       <div className="about-container">
         <div className="about-text">
           <h1>
-            I am developer, who tries to expand his knowledge in many
-            technologies. I am currently studying, but in free time i am
-            learning web-development.
+            As a developer, I try to expand my knowledge in many technologies. I am currently studying and during my free time I am constantly increasing my skills in web-development.
           </h1>
           <br />
           <h2>
@@ -54,15 +52,11 @@ const About = () => {
           </h2>
           <br />
           <h2>
-            The most important to me is to develop myself everyday in every
-            aspect of life. I am into books. I go to gym few times a week and i
-            play basketball. I attend conferences, recruitment fairs and
-            additional IT-related events at my university.
+            The most essential thing for me is self-development on daily basis. When it comes to my interests I really am into books.  I also attend gym few times a week and play basketball. I am deeply involved in wide range of activities in the university life as: conferences, recruitments fairs and additional IT-related events.
           </h2>
           <br />
           <h2>
-            I am looking for my first developer job and i am really motivated to
-            work for it
+            I want to start my career as developer, so I am looking for a job in IT industry. It has always been my main interest, so I am motivated to work.
           </h2>
           <br />
           <a
