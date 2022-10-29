@@ -47,7 +47,7 @@ const RotatingCube = (props: any) => {
         <lineBasicMaterial
           color={props.color}
           attach="material"
-          linewidth={50}
+          linewidth={2}
         />
       </lineSegments>
     </mesh>

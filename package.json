@@ -1,4 +1,5 @@
 {
+  "homepage": "https://HaZeL-spc.github.io/myPortfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -26,6 +27,8 @@
     "typescript": "^4.7.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -54,6 +57,7 @@
     "@types/react": "17.0.0",
     "@types/react-dom": "17.0.0",
     "@types/three": "^0.133.0",
+    "gh-pages": "^4.0.0",
     "typescript": "4.7.4"
   }
 }

@@ -3,6 +3,7 @@
 
 .navbar {
     .icon-menu-div {
+      overflow-x: hidden;
       position: fixed;
       top: 40px;
       right: 80px;
@@ -49,6 +50,9 @@
     }
 
     .menu-div {
+      // width: 100vw;
+      // height: 100vh;
+      
       background-color: $BackgroundColor;
       transition: transform 0.45s;
     }
@@ -70,6 +74,8 @@
     }
 
     .menu-div {
+      // margin: 0px;
+      // padding: 0px;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -144,6 +150,9 @@
 
   @media screen and (max-width: 768px){
   .navbar {
+    .icon-menu-div {
+      right: 40px;
+    }
     .menu-div {
       .links-wrapper {
         h1 {

@@ -1,4 +1,5 @@
 .navbar .icon-menu-div {
+  overflow-x: hidden;
   position: fixed;
   top: 40px;
   right: 80px;
@@ -185,6 +186,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .navbar .icon-menu-div {
+    right: 40px;
+  }
   .navbar .menu-div .links-wrapper h1 {
     font-size: 8vh;
   }

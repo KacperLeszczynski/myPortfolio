@@ -31,6 +31,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
+  overflow-x: hidden;
 }
 
 .main-page-container .front-page-container {

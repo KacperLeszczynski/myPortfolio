@@ -50,7 +50,7 @@ const Projects = () => {
           header="Arsenal App"
           text="React and Django REST framework connected app. Django uses web-scraping to get data and to make API. React-side gets this API and displays information in good-looking format."
           buttonText="Visit Website"
-          projectLink="https://github.com/HaZeL-spc/arsenalPage"
+          codeLink="https://github.com/HaZeL-spc/arsenalPage"
         />
       </div>
       <h1 className="projects-tags">{"</projects>"}</h1>
