@@ -12,9 +12,11 @@
         // margin-left: auto;
     
         .bar-container {
-            display: inline-block;
+          all:unset;  
+          display: inline-block;
             cursor: pointer;
-          
+            
+
             .bar1,
             .bar2,
             .bar3 {
@@ -88,7 +90,7 @@
           text-align: left;
           width: 100%;
           font-family: 'Helvetica', 'Arial', sans-serif;
-          font-weight: 100;
+          font-weight: 300;
           // font-size: 5em;
           font-size: 10vh;
           opacity: 0%;

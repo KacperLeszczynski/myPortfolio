@@ -4,6 +4,7 @@ import { DARK_GREEN, ORANGE } from "../Constants";
 import "../css/Navbar.css";
 
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(true)
   function activateNav() {
     const htmlWebsite = document.getElementsByTagName("html")[0];
     const navbarSite = document.querySelector(".navbar");
@@ -12,9 +13,25 @@ const Navbar = () => {
     const thirdAnimation = document.querySelector(".third-animation");
     const menuDiv = document.querySelector(".menu-div");
 
+    const buttonMenu = document.querySelector(".bar-container") as HTMLButtonElement;
+    
+    // buttonMenu!.disabled = true;
+    // setTimeout(() => {
+    //   buttonMenu!.disabled = false;
+    // }, 1500)
+  
+    if (!isActive) return;
+    setIsActive(false);
+    setTimeout(() => {
+      setIsActive(true)
+    }, 1500)
+    
+    
+
     if (navbarSite) {
       navbarSite.classList.toggle("change");
     }
+
 
     if (
       firstAnimation &&
@@ -54,6 +71,8 @@ const Navbar = () => {
           }, 400);
         }, 400);
     }
+
+
   }
 
   function hideHeadersMenu() {
@@ -95,11 +114,11 @@ const Navbar = () => {
   return (
     <section className="navbar">
       <div className="icon-menu-div">
-        <div className="bar-container" onClick={activateNav}>
+        <button className="bar-container" onClick={activateNav}>
           <div className="bar1"></div>
           <div className="bar2"></div>
           <div className="bar3"></div>
-        </div>
+        </button>
       </div>
       <div className="first-animation"></div>
       <div className="second-animation"></div>
