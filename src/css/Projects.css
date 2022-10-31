@@ -6,6 +6,7 @@
 }
 
 .projects-container-part {
+  margin-top: 300px;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;

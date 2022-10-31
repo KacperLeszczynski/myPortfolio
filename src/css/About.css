@@ -6,6 +6,7 @@
 }
 
 .projects-container-part {
+  margin-top: 300px;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,6 +280,12 @@
   width: 100%;
   height: 100%;
   position: relative;
+  overflow-x: hidden;
+}
+
+.about-container-part .about-container .about-image .main-svg-about {
+  max-width: 800px;
+  max-height: 600px;
 }
 
 .about-container-part .about-container .about-image .main-svg-about path {

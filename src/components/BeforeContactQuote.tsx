@@ -37,15 +37,16 @@ const BeforeContactQuote = () => {
 
   return (
     <Controller>
-      <Scene duration={800} triggerHook={1} offset={500}>
+      <Scene duration={window.innerHeight} triggerHook={1} offset={window.innerHeight/3}>
         {(progress: any) => (
-          <div className="before-about-contact-div">
+          <section className="before-about-contact-div">
             <GeometryIcon color={DEEP_PURPLE} classname="right-icon-svg" progress={progress}/>
             <GeometryIcon color={DEEP_PURPLE} classname="left-icon-svg" progress={progress}/>
             <svg
               className="main-svg"
               id="the-main-svg"
               width="100%"
+              height="80%"
               viewBox="0 0 800 600"
             >
               <Timeline totalProgress={progress} paused>
@@ -82,7 +83,7 @@ const BeforeContactQuote = () => {
                 </Tween>
               </Timeline>
             </svg>
-          </div>
+          </section>
         )}
       </Scene>
     </Controller>

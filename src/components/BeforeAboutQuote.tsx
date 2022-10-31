@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   DEEP_PURPLE,
   DARK_GREEN,
@@ -26,7 +26,6 @@ function makeBG(elem: SVGTextElement) {
 
 const BeforeAboutQuote = () => {
   const { ref, inView, entry } = useInView({ threshold: 0 });
-
   // const text1Ref = useRef<SVGTextElement | null>(null);
   // const text2Ref = useRef<SVGTextElement | null>(null);
 
@@ -43,15 +42,16 @@ const BeforeAboutQuote = () => {
   return (
     <Controller>
       {/* <Shape2d /> */}
-      <Scene duration={700} triggerHook={1} offset={400}>
+      <Scene duration={window.innerHeight} triggerHook={1} offset={window.innerHeight/3}>
         {(progress: any) => (
-          <div className="before-about-quote-div" ref={ref}>
+          <section className="before-about-quote-div" ref={ref}>
             <GeometryIcon color={ORANGE} classname="right-icon-svg" progress={progress}/>
             <GeometryIcon color={ORANGE} classname="left-icon-svg" progress={progress}/>
             <svg
               className="main-svg"
               id="the-main-svg"
               width="100%"
+              height="80%"
               viewBox="0 0 800 600"
             >
               <Timeline totalProgress={progress} paused>
@@ -89,7 +89,7 @@ const BeforeAboutQuote = () => {
                 </Tween>
               </Timeline>
             </svg>
-          </div>
+          </section>
         )}
       </Scene>
     </Controller>

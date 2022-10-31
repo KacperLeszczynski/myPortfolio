@@ -12,10 +12,20 @@ import {
 import { useInView } from "react-intersection-observer";
 
 const About = () => {
-  const { ref, inView, entry } = useInView({ threshold: 0.2 });
+  const { ref, inView, entry } = useInView({ threshold: 0.8 });
+
+  
 
   useEffect(() => {
     console.log("1");
+
+    // if (inView && window.innerHeight < 600) {
+    //   const element = entry?.target as HTMLElement;
+    //   const triangle = element.children[0] as HTMLElement;
+    //   const image = element.children[1] as HTMLElement;
+    //   triangle.style.transform = "matrix(0.01,0,0,0.01,300,90)";
+    //   image.style.transform = "matrix(0.0001,0,0,0.0001,300,440)";
+    // }
 
     if (inView) {
       console.log("2");
@@ -39,7 +49,7 @@ const About = () => {
   }, [inView]);
 
   return (
-    <div className="about-container-part" id="about">
+    <section className="about-container-part" id="about">
       <h1 className="about-tags">{"<about>"}</h1>
       <div className="about-container">
         <div className="about-text">
@@ -72,6 +82,7 @@ const About = () => {
             className="main-svg-about"
             ref={ref}
             width="100%"
+            height="100%"
             viewBox="0 0 600 600"
           >
             <path
@@ -89,7 +100,7 @@ const About = () => {
         </div>
       </div>
       <h1 className="about-tags">{"</about>"}</h1>
-    </div>
+    </section>
   );
 };
 

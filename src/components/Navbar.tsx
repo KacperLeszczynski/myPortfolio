@@ -93,7 +93,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar">
+    <section className="navbar">
       <div className="icon-menu-div">
         <div className="bar-container" onClick={activateNav}>
           <div className="bar1"></div>
@@ -112,7 +112,7 @@ const Navbar = () => {
           <h1 onClick={(e) => changeScroll("contact", e)}>CONTACT</h1>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -11,7 +11,7 @@ import "../css/Projects.css";
 
 const Projects = () => {
   return (
-    <div className="projects-container-part" id="project">
+    <section className="projects-container-part" id="project">
       <h1 className="projects-tags">{"<projects>"}</h1>
       <div className="projects-container">
         <SpecificProject
@@ -54,7 +54,7 @@ const Projects = () => {
         />
       </div>
       <h1 className="projects-tags">{"</projects>"}</h1>
-    </div>
+    </section>
   );
 };
 

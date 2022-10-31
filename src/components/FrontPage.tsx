@@ -11,7 +11,7 @@ import {
 
 const FrontPage = () => {
   return (
-    <div className="front-page-container" id="home">
+    <section className="front-page-container" id="home">
       <h1 className="front-page-text">
         Hi! My name is Kacper. I am web developer, who wants to develop his
         skills to maximum level
@@ -40,7 +40,7 @@ const FrontPage = () => {
           yMove={0.004}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

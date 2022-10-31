@@ -30,13 +30,13 @@ const LoadingAnimation = () => (
       </Scene> */}
 
     <Scene
-      duration={2000}
+      duration={window.innerHeight*3}
       pin={{ pushFollowers: true }}
       triggerHook={0.7}
-      offset={250}
+      offset={300}
     >
       {(progress: any) => (
-        <div className="loading-animation-container">
+        <section className="loading-animation-container">
           <div className="wrapper">
             <h1>Loading...</h1>
             <div className="loading-panel" aria-readonly={true}>
@@ -55,7 +55,7 @@ const LoadingAnimation = () => (
               </Tween>
             </Timeline>
           </div>
-        </div>
+        </section>
       )}
     </Scene>
   </Controller>
