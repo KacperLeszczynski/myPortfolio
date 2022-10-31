@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/myPortfolio/static/css/main.3ee2cd90.css",
-    "main.js": "/myPortfolio/static/js/main.694e6f03.js",
+    "main.css": "/myPortfolio/static/css/main.ee9ebbbf.css",
+    "main.js": "/myPortfolio/static/js/main.5260a334.js",
     "static/media/KacperLeszczynskiCV.pdf": "/myPortfolio/static/media/KacperLeszczynskiCV.5dca86f2cd79dac89a71.pdf",
     "index.html": "/myPortfolio/index.html",
-    "main.3ee2cd90.css.map": "/myPortfolio/static/css/main.3ee2cd90.css.map",
-    "main.694e6f03.js.map": "/myPortfolio/static/js/main.694e6f03.js.map"
+    "main.ee9ebbbf.css.map": "/myPortfolio/static/css/main.ee9ebbbf.css.map",
+    "main.5260a334.js.map": "/myPortfolio/static/js/main.5260a334.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ee2cd90.css",
-    "static/js/main.694e6f03.js"
+    "static/css/main.ee9ebbbf.css",
+    "static/js/main.5260a334.js"
   ]
 }
