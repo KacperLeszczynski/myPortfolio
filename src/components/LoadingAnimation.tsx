@@ -30,7 +30,7 @@ const LoadingAnimation = () => (
       </Scene> */}
 
     <Scene
-      duration={window.innerHeight*3}
+      duration={window.innerHeight*1.5}
       pin={{ pushFollowers: true }}
       triggerHook={0.7}
       offset={300}

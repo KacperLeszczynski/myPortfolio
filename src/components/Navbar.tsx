@@ -13,7 +13,7 @@ const Navbar = () => {
     const thirdAnimation = document.querySelector(".third-animation");
     const menuDiv = document.querySelector(".menu-div");
 
-    const buttonMenu = document.querySelector(".bar-container") as HTMLButtonElement;
+    // const buttonMenu = document.querySelector(".bar-container") as HTMLButtonElement;
     
     // buttonMenu!.disabled = true;
     // setTimeout(() => {
@@ -26,8 +26,6 @@ const Navbar = () => {
       setIsActive(true)
     }, 1500)
     
-    
-
     if (navbarSite) {
       navbarSite.classList.toggle("change");
     }
