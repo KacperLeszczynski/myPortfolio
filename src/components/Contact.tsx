@@ -31,7 +31,7 @@ const Contact = () => {
     textUnderline[0].style.backgroundColor = DEEP_PURPLE;
     wrapper?.classList.add("clicked");
 
-    navigator.clipboard.writeText("kacper.8leszczynski8@gmail.com");
+    navigator.clipboard.writeText("kacperleszczynski.it@gmail.com");
   };
 
   const onFocus = (
@@ -54,29 +54,42 @@ const Contact = () => {
 
   const sendEmail = () => {
     const prop = form.current as string | HTMLFormElement;
-    console.log("first");
+    // console.log("first");
 
     if (!email || !name || !message) {
       return;
     }
 
-    emailjs.sendForm("service_uuzrhlf", "template_1sbi0vm", prop, USER_ID).then(
+    emailjs.sendForm("service_taly0vq", "template_um7ie3j", prop, USER_ID).then(
       (result) => {
-        console.log(result.text);
+        // console.log(result.text);
+        setMessageSuccess("Message sent!")
+        setEmail("");
+        setName("");
+        setMessage("");
+    
+        nameRef.current!.innerHTML = "NAME";
+        emailRef.current!.innerHTML = "EMAIL";
+        messageRef.current!.innerHTML = "MESSAGE";
+    
+        //put back labels to place
+        nameRef.current!.parentElement!.classList.remove("change-translateY");
+        emailRef.current!.parentElement!.classList.remove("change-translateY");
+        messageRef.current!.parentElement!.classList.remove("change-translateY");
+    
+        console.log(nameRef.current!.classList);
       },
       (error) => {
         console.log(error.text);
       }
     );
 
-    console.log("second");
+    // console.log("second");
   };
 
   const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // const form = e.target as Element;
-
-    sendEmail();
 
     //work with label
     if (!name) {
@@ -105,27 +118,14 @@ const Contact = () => {
       }
       return;
     }
-    console.log("yay");
+    // console.log("yay");
+    sendEmail();
 
     const submitButton = document.getElementsByClassName(
-      "icon-send"
+    "icon-send"
     ) as HTMLCollectionOf<HTMLElement>;
     // submitButton[0].style.color = DARK_GREEN;
-    setMessageSuccess("Message sent!");
-    setEmail("");
-    setName("");
-    setMessage("");
-
-    nameRef.current!.innerHTML = "NAME";
-    emailRef.current!.innerHTML = "EMAIL";
-    messageRef.current!.innerHTML = "MESSAGE";
-
-    //put back labels to place
-    nameRef.current!.parentElement!.classList.remove("change-translateY");
-    emailRef.current!.parentElement!.classList.remove("change-translateY");
-    messageRef.current!.parentElement!.classList.remove("change-translateY");
-
-    console.log(nameRef.current!.classList);
+    // setMessageSuccess("Message sent!");
   };
 
   return (
@@ -135,7 +135,7 @@ const Contact = () => {
         <div className="headline">
           <h1>Feel free to contact me on&nbsp;</h1>
           <div className="wrapper" id="wrapper-email">
-            <h1 onClick={EmailClicked}>kacper.8leszczynski8@gmail.com</h1>
+            <h1 onClick={EmailClicked}>kacperleszczynski.it@gmail.com</h1>
             <div className="text-underline"></div>
           </div>
           <br />

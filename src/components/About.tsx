@@ -17,7 +17,7 @@ const About = () => {
   
 
   useEffect(() => {
-    console.log("1");
+    // console.log("1");
 
     // if (inView && window.innerHeight < 600) {
     //   const element = entry?.target as HTMLElement;

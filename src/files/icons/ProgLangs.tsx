@@ -6,16 +6,16 @@ const ProgLags = () => {
   const { ref, inView, entry } = useInView({ threshold: 1 });
 
   useEffect(() => {
-    console.log("1");
+    // console.log("1");
 
     if (inView) {
-      console.log("2");
+      // console.log("2");
       const element = entry?.target as HTMLElement;
       const child1 = element.children[0] as HTMLElement;
       const child2 = element.children[1] as HTMLElement;
       const child3 = element.children[2] as HTMLElement;
 
-      console.log(child1);
+      // console.log(child1);
       child1.style.opacity = "1";
       setTimeout(() => {
         child2.style.opacity = "1";
@@ -35,7 +35,7 @@ const ProgLags = () => {
         const child2 = element.children[1] as HTMLElement;
         const child3 = element.children[2] as HTMLElement;
 
-        console.log(child1);
+        // console.log(child1);
         child1.style.opacity = "0";
         child2.style.opacity = "0";
         child3.style.opacity = "0";
