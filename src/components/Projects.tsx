@@ -19,18 +19,21 @@ const Projects = () => {
           text="Responsive website that uses many SVGs, Greensock (GSAP), ScrollMagic, React three with many transitions and animations."
           buttonText="Visit Website"
           codeLink="https://github.com/HaZeL-spc/myPortfolio"
+          projectLink="https://kacperleszczynski.pl/"
         />
         <SpecificProject
           header="Instrument App"
           text="TypeScript react project. Smooth website of brand called Instrument with intersection-observers and animations."
           buttonText="Visit Website"
           codeLink="https://github.com/HaZeL-spc/InstrumentApp"
+          projectLink="https://hazel-spc.github.io/InstrumentApp/"
         />
         <SpecificProject
           header="Card Animation"
           text="React project which needed math to calculate position of cards to animate them correctly. To do it I used styled-components."
           buttonText="Visit Website"
           codeLink="https://github.com/HaZeL-spc/cardAnimation"
+          projectLink="https://hazel-spc.github.io/cardAnimation/"
         />
         <SpecificProject
           header="Spotify Stats Curses"
@@ -50,7 +53,7 @@ const Projects = () => {
           header="Arsenal App"
           text="React and Django REST framework connected app. Django uses web-scraping to get data and to make API. React-side gets this API and displays information in good-looking format."
           buttonText="Visit Website"
-          codeLink="https://github.com/HaZeL-spc/arsenalPage"
+          codeLink="https://github.com/HaZeL-spc/ArsenalApp"
         />
       </div>
       <h1 className="projects-tags">{"</projects>"}</h1>
