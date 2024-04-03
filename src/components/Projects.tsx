@@ -26,14 +26,14 @@ const Projects = () => {
           text="TypeScript react project. Smooth website of brand called Instrument with intersection-observers and animations."
           buttonText="Visit Website"
           codeLink="https://github.com/HaZeL-spc/InstrumentApp"
-          projectLink="https://hazel-spc.github.io/InstrumentApp/"
+          projectLink="https://kacperleszczynski.github.io/InstrumentApp/"
         />
         <SpecificProject
           header="Card Animation"
           text="React project which needed math to calculate position of cards to animate them correctly. To do it I used styled-components."
           buttonText="Visit Website"
           codeLink="https://github.com/HaZeL-spc/cardAnimation"
-          projectLink="https://hazel-spc.github.io/cardAnimation/"
+          projectLink="https://kacperleszczynski.github.io/cardAnimation/"
         />
         <SpecificProject
           header="Spotify Stats Curses"
@@ -47,7 +47,7 @@ const Projects = () => {
           text="Form app, where user writes start and finish point and gets road between them using Leaflet API. It gives more info about the road and you can save it in PDF using jspdf."
           buttonText="Visit Website"
           codeLink="https://github.com/HaZeL-spc/MapsProject"
-          projectLink="https://hazel-spc.github.io/mapsProject/"
+          projectLink="https://kacperleszczynski.github.io/mapsProject/"
         />
         <SpecificProject
           header="Arsenal App"
